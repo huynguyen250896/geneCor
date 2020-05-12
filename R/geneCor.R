@@ -95,8 +95,7 @@ geneCor = function(cna = NULL, exp1 = NULL, alternative1=c("two.sided","less","g
     geom_vline(inherit.aes = FALSE,
                data = DF_mean, aes(xintercept = Mean, color = Dataset),
                linetype = "dashed", size = 2,
-               show.legend = FALSE)
-  q + xlab("Z value")
+               show.legend = FALSE) + xlab("Z value") 
   print(q)
 
   #warning
