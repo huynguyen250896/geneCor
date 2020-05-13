@@ -17,7 +17,7 @@ geneCor(
 \item{cna, exp1, alternative1, met, exp2, alternative2}{}
 }
 \description{
-Automatically individually compute the Pearson's correlation coefficients of shared genes between CNA data and EXP data, and those between MET data and EXP data, visualize the distribution of expression of CNVcor genes and expression of METcor genes on a page, and examine the significance of each of those skewed distributions.
+Automatically individually compute the Pearson's correlation coefficients of shared genes between CNA data and EXP data, and those between MET data and EXP data, visualize the distribution of expression of CNVcor genes and expression of METcor genes on a page, and examine the significance of each of those skewed distributions. For further information on requirements as well as how to implement this tool, please visit my Github repository: https://github.com/huynguyen250896/geneCor
 }
 \examples{
 geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater")
