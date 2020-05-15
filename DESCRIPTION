@@ -9,7 +9,7 @@ Description: Automatically individually compute the Pearson's correlation
     and those between MET data and EXP data, visualize the distribution of expression of     
     CNVcor genes and expression of METcor genes on a page, 
     and examine the significance of each of those skewed distributions.
-License: GPL-2
+License: MIT license
 Depends:
     R (>= 3.1.0)
 Suggests:
