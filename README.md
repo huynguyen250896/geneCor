@@ -1,6 +1,6 @@
 # geneCor v0.1.0
 #### I. Introduction
-The package geneSA is built to serve as a support tool for the paper "...". Automatically individually compute the Pearson's correlation coefficients of genes shared between CNA data and EXP data, and those shared between MET data and EXP data; visualize the distribution of expression of CNVcor genes and expression of METcor genes on a page; and examine the significance of each of those skewed distributions. </br> 
+The package geneCor is built to serve as a support tool for the paper "...". It Automatically individually computes the Pearson's correlation coefficients of genes shared between CNA data and EXP data, and those shared between MET data and EXP data; visualizes the overall distribution of Z values between MET or CNA and the corresponding mRNA on a page; and examines the significance of the skewness for those skewed distributions using D'Agostino test. </br> 
 
 
 #### IV. Implementation
