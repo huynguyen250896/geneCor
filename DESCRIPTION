@@ -1,14 +1,14 @@
 Package: geneCor
 Type: Package
-Title: Tool for Identification of CNAcor and METcor, Visualization of the distribution of expression of CNVcor genes and expression of METcor genes on a page, and Examination of the significance of each of those skewed distributions.
+Title: Tool for Identification of CNAcor and METcor, Visualization of the overall distribution of Z values between MET or CNA and the corresponding mRNA on a page, and Examination of the significance of the skewness for the distributions using the D’Agostino test.
 Version: 0.1.0
 Author: Quang-Huy Nguyen
 Maintainer: Quang-Huy Nguyen <huynguyen96.dnu@gmail.com>
 Description: Automatically individually compute the Pearson's correlation 
     coefficients of shared genes between CNA data and EXP data, 
-    and those between MET data and EXP data, visualize the distribution of expression of     
-    CNVcor genes and expression of METcor genes on a page, 
-    and examine the significance of each of those skewed distributions.
+    and those between MET data and EXP data, visualize the overall distribution of 
+    Z values between MET or CNA and the corresponding mRNA on a page, and examine 
+    the significance of the skewness for the distributions were observed using the D’Agostino test.
 License: MIT license
 Depends:
     R (>= 3.1.0)
