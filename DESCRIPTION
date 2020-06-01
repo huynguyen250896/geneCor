@@ -5,13 +5,13 @@ Version: 0.1.0
 Author: Quang-Huy Nguyen
 Maintainer: Quang-Huy Nguyen <huynguyen96.dnu@gmail.com>
 Description: Automatically individually compute the Pearson's correlation 
-   coefficients of genes shared between CNA data and the corresponding mRNA, 
-   and those shared between MET data and the corresponding mRNA, visualize 
-   the overall distribution of Z values between MET or CNA and the corresponding mRNA 
-   on a page, and examine the significance of the skewness for the distributions 
-   were observed using the D’Agostino test. For further information on requirements 
-   as well as how to implement this tool, please visit my Github repository: 
-   https://github.com/huynguyen250896/geneCor
+    coefficients of genes shared between CNA data and the corresponding mRNA, 
+    and those shared between MET data and the corresponding mRNA, visualize 
+    the overall distribution of Z values between MET or CNA and the corresponding mRNA 
+    on a page, and examine the significance of the skewness for the distributions 
+    were observed using the D’Agostino test. For further information on requirements 
+    as well as how to implement this tool, please visit my Github repository: 
+    https://github.com/huynguyen250896/geneCor
 License: MIT license
 Depends:
     R (>= 3.1.0)
