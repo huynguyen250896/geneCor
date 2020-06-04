@@ -16,3 +16,20 @@ running example:
 ```sh
 geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater")
 ```
+
+#### V.Citation 
+Please kindly cite the two repositories if you use the code, datasets or any results in this repo: </br>
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3872667.svg)](https://doi.org/10.5281/zenodo.3872667)
+```sh
+@software{nguyen_quang_huy_2020_3872667,
+  author       = {Nguyen, Quang-Huy},
+  title        = {huynguyen250896/geneCor: GeneCor v0.1.0},
+  month        = jun,
+  year         = 2020,
+  publisher    = {Zenodo},
+  version      = {v0.1.0},
+  doi          = {10.5281/zenodo.3872667},
+  url          = {https://doi.org/10.5281/zenodo.3872667}
+}
+```
+Feel free to contact [Quang-Huy Nguyen](https://github.com/huynguyen250896) <huynguyen96.dnu AT gmail DOT com> for any questions about the code and results.
