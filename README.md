@@ -3,7 +3,7 @@
 The package geneCor is built to serve as a support tool for the paper "...". It automatically individually computes the Pearson's correlation coefficients of genes shared between CNA data and the corresponding mRNA, and those shared between MET data and the corresponding mRNA; visualizes the overall distribution of Z values between MET or CNA and the corresponding mRNA on a page; and examines the significance of the skewness for those distributions using D'Agostino test. </br> 
 
 #### II. Data Struture
-You must preprare the four kinds of the following data: *df1*, *df2*, *df3*, and *df4* (see the 'III.Implementation' section). 
+You must preprare the four kinds of the following data: *df1*, *df2*, *df3*, and *df4* (see the 'III.Implementation' section).</br>  
 df1: . </br>  
 df2: . </br>  
 df3: . </br>  
