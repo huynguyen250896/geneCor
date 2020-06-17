@@ -28,6 +28,5 @@ geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alter
 Please kindly cite the two repositories if you use the code, datasets or any results in this repo: </br>
 ```sh
 ...
-}
 ```
 Feel free to contact [Quang-Huy Nguyen](https://github.com/huynguyen250896) <huynguyen96.dnu AT gmail DOT com> for any questions about the code and results.
