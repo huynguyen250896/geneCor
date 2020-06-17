@@ -25,7 +25,7 @@ geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alter
 ```
 
 #### V.Citation 
-Please kindly cite the two repositories if you use the code, datasets or any results in this repo: </br>
+Please kindly cite the following paper if you use the code, datasets or any results in this repo: </br>
 ```sh
 ...
 ```
