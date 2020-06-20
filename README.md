@@ -24,7 +24,7 @@ running example:
 geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater")
 ```
 
-#### V.Citation 
+#### V. Citation 
 Please kindly cite the following paper if you use the code, datasets or any results in this repo: </br>
 ```sh
 ...
