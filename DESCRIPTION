@@ -1,10 +1,10 @@
 Package: geneCor
 Type: Package
 Title: Tool for Identification of CNAcor and METcor, Visualization of the overall distribution of Z values between MET or CNA and the corresponding mRNA on a page, and Examination of the significance of the skewness for the distributions using the D’Agostino test.
-Version: 0.1.0
+Version: 0.1.1
 Author: Quang-Huy Nguyen
 Maintainer: Quang-Huy Nguyen <huynguyen96.dnu@gmail.com>
-Description: Automatically individually compute the Pearson's correlation 
+Description: Automatically individually compute the correlation 
     coefficients of genes shared between CNA data and the corresponding mRNA, 
     and those shared between MET data and the corresponding mRNA, visualize 
     the overall distribution of Z values between MET or CNA and the corresponding mRNA 
