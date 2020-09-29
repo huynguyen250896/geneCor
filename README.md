@@ -1,6 +1,6 @@
 # geneCor v0.1.0
 #### I. Introduction
-The package geneCor is built to serve as a support tool for the paper "*Multi-omics analysis detects novel prognostic subgroups of breast cancer*". </br> It automatically individually computes the Pearson's correlation coefficients of genes shared between CNA data and the corresponding mRNA, and those shared between MET data and the corresponding mRNA; visualizes the overall distribution of Z values between MET or CNA and the corresponding mRNA on a page; and examines the significance of the skewness for those distributions using D'Agostino test. </br> 
+The package geneCor is built to serve as a support tool for the paper "*Multi-omics analysis detects novel prognostic subgroups of breast cancer*". </br> It automatically individually computes the correlation coefficients of genes shared between CNA data and the corresponding mRNA, and those shared between MET data and the corresponding mRNA; visualizes the overall distribution of Z values between MET or CNA and the corresponding mRNA on a page; and examines the significance of the skewness for those distributions using D'Agostino test. </br> 
 
 #### II. Data Struture
 You must preprare the four kinds of the following data: *df1*, *df2*, *df3*, and *df4* (see the 'III.Implementation' section).</br>  
@@ -21,7 +21,9 @@ library(geneCor)
 ```
 running example:
 ```sh
-geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater")
+geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater") #compute Pearson's correlation coefficients (default method)
+geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater", method = "spearman") #compute Pearson's correlation coefficients #compute Spearman's Rank correlation coefficients
+geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater", method = "kendall") #compute Pearson's correlation coefficients #compute Kendall's correlation coefficients
 ```
 
 #### V. Citation 
