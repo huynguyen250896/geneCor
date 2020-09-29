@@ -21,9 +21,9 @@ library(geneCor)
 ```
 running example:
 ```sh
-geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater") #compute Pearson's correlation coefficients (default method)
-geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater", method = "spearman") #compute Pearson's correlation coefficients #compute Spearman's Rank correlation coefficients
-geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater", method = "kendall") #compute Pearson's correlation coefficients #compute Kendall's correlation coefficients
+geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater") #compute Pearson's correlation coefficients (default method).
+geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater", method = "spearman") #compute Spearman's Rank correlation coefficients.
+geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater", method = "kendall") #compute Kendall's correlation coefficients.
 ```
 
 #### V. Citation 
