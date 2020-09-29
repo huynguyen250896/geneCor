@@ -1,6 +1,6 @@
 #' @title Tool for Identification of CNAcor and METcor, Visualization of the distribution of expression of CNVcor genes and expression of METcor genes on a page, and Examination of the significance of the skewness of those distributions.
 #'
-#' @description  It automatically individually computes the Pearson's correlation coefficients of genes shared between CNA data and the corresponding mRNA, and those shared between MET data and the corresponding mRNA; visualizes the overall distribution of Z values between MET or CNA and the corresponding mRNA on a page; and examines the significance of the skewness for those distributions using D'Agostino test.
+#' @description  It automatically individually computes the correlation coefficients of genes shared between CNA data and the corresponding mRNA, and those shared between MET data and the corresponding mRNA; visualizes the overall distribution of Z values between MET or CNA and the corresponding mRNA on a page; and examines the significance of the skewness for those distributions using D'Agostino test.
 #'
 #' @param cna,exp1,alternative1,met,exp2,alternative2
 #'
