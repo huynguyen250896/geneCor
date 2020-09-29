@@ -80,7 +80,7 @@ geneCor = function(cna = NULL, exp1 = NULL, alternative1=c("two.sided","less","g
 
   print(agostino.test(met_cor$fisher_z_trans, alternative = alternative2))
 
-  ####  visualization of distrubution
+  ####  visualization of distribution
   DF1 = as.data.frame(cna_cor) %>% mutate(Dataset = "CNA")
   DF2 = as.data.frame(met_cor) %>% mutate(Dataset = "MET")
   DF <- bind_rows(DF1,DF2)
