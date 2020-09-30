@@ -1,4 +1,4 @@
-# geneCor v0.1.0
+# geneCor v0.1.1
 #### I. Introduction
 The package geneCor is built to serve as a support tool for the paper "*Multi-omics analysis detects novel prognostic subgroups of breast cancer*". </br> It automatically individually computes the correlation coefficients of genes shared between CNA data and the corresponding mRNA, and those shared between MET data and the corresponding mRNA; visualizes the overall distribution of Z values between MET or CNA and the corresponding mRNA on a page; and examines the significance of the skewness for those distributions using D'Agostino test. </br> 
 
