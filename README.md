@@ -29,7 +29,7 @@ geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alter
 #### V. Citation 
 Please kindly cite the following paper (and Star this Github repository if you find this tool of interest) if you use the tool in this repo: </br>
 ```sh
-####Author: Nguyen, Quang-Huy
+Author: Nguyen, Quang-Huy
 Nguyen, Hung
 Nguyen, Tin
 Le, Duc-Hau
