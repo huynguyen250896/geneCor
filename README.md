@@ -25,8 +25,11 @@ geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alter
 geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater", method = "spearman") #compute Spearman's Rank correlation coefficients.
 geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater", method = "kendall") #compute Kendall's correlation coefficients.
 ```
+#### V. What's new
+----
+- 2020-01-01 : The function now can compute one of the three common correlation methods: Pearson, Spearman's rank, or Kendall.
 
-#### V. Citation 
+#### VI. Citation 
 Please kindly cite the following paper (and Star this Github repository if you find this tool of interest) if you use the tool in this repo: </br>
 ```sh
 Author: Nguyen, Quang-Huy
