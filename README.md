@@ -11,7 +11,7 @@ df4: . </br>
 Please download datasets [Dataset](https://github.com/huynguyen250896/geneCor/tree/master/Dataset) as examples to well grasp geneCor's requirement on data structure. </br>
 
 #### IV. Implementation
---
+---
 Use the following command to install directly from GitHub;
 ```sh
 devtools::install_github("huynguyen250896/geneCor")
@@ -27,7 +27,7 @@ geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alter
 geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater", method = "kendall") #compute Kendall's correlation coefficients.
 ```
 #### V. What's new
---
+---
 - 2020-01-01 : The function now can compute one of the three common correlation methods: Pearson, Spearman's rank, or Kendall.
 
 #### VI. Citation 
