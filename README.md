@@ -30,7 +30,7 @@ geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alter
 ```
 #### V. What's new
 ---
-- 2020-01-01 : The function now can compute one of the three common correlation methods: Pearson, Spearman's rank, or Kendall.
+- 2020-09-30 : The function now can compute one of the three common correlation methods: Pearson, Spearman's rank, or Kendall.
 
 #### VI. Citation 
 ---
