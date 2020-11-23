@@ -7,9 +7,9 @@ The package geneCor is built to serve as a support tool for the paper "*[Multi-o
 ---
 You must preprare the four kinds of the following data: *df1*, *df2*, *df3*, and *df4* (see the 'III.Implementation' section).</br>  
 df1: copy-number alteration matrix whose rows are samples, and columns are genes. </br>  
-df2: gene expression matrix is corresponding to the matrix df1, whose rows are samples, and columns are genes. NOTE that the size of the matrix df2 is the same as that of the matrix df1. </br>  
+df2: gene expression matrix that corresponds to the matrix df1, whose rows are samples, and columns are genes. NOTE that the size of the matrix df2 is essentially the same as that of the matrix df1. </br>  
 df3: methylation matrix whose rows are samples, and columns are genes. </br>  
-df4: gene expression matrix is corresponding to the matrix df3, whose rows are samples, and columns are genes. NOTE that the size of the matrix df4 is the same as that of the matrix df3. </br>  
+df4: gene expression matrix that corresponds to the matrix df3, whose rows are samples, and columns are genes. NOTE that the size of the matrix df4 is essentially the same as that of the matrix df3. </br>  
 Please download datasets [Dataset](https://github.com/huynguyen250896/geneCor/tree/master/Dataset) as examples to well grasp geneCor's requirement on data structure. </br>
 
 #### III. Implementation
