@@ -2,24 +2,53 @@
 % Please edit documentation in R/geneCor.R
 \name{geneCor}
 \alias{geneCor}
-\title{Tool for Identification of CNAcor and METcor, Visualization of the distribution of expression of CNVcor genes and expression of METcor genes on a page, and Examination of the significance of each of those skewed distributions.}
-\usage{
-geneCor(
-  cna = NULL,
-  exp1 = NULL,
-  alternative1 = c("two.sided", "less", "greater"),
-  met = NULL,
-  exp2 = NULL,
-  alternative2 = c("two.sided", "less", "greater")
-)
+\title{geneCor: Identification of correlation between two pairs of three datasets, visualization of Z-score distributions of those two pairs on a page, and examination of the significance of the skewness of those distributions.}
+\usage{geneCor(dat1, cordat1, alternative1, dat2, cordat2, alternative2, methodCC, adjustedP))
 }
 \arguments{
-\item{cna, exp1, alternative1, met, exp2, alternative2}{}
-}
-\description{
-Automatically individually compute the Pearson's correlation coefficients of genes shared between CNA data and EXP data, and those shared between MET data and EXP data, visualize the distribution of expression of CNVcor genes and expression of METcor genes on a page, and examine the significance of each of those skewed distributions. For further information on requirements as well as how to implement this tool, please visit my Github repository: https://github.com/huynguyen250896/geneCor
-}
-\examples{
-geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater")
+\item{dat1}{data.frame or matrix. The first input data includes its rows are samples and its columns are genes.}
 
+\item{cordat1}{data.frame or matrix. The data includes its rows are samples and its columns are clinical features. 
+This itself is the corresponding third data of \code{dat1}. Namely, correlation analysis will be implemented 
+between \code{dat1} and \code{cordat1}}
+
+\item{alternative1}{a character string specifying the alternative hypothesis for Z-score distribution between \code{dat1} 
+and \code{cordat1}. Must be one of "two.sided", "greater" or "less". You can specify just the initial letter.}  
+  
+\item{dat2}{data.frame or matrix. The second input data includes its rows are samples and its columns are genes.}
+
+\item{cordat2}{data.frame or matrix. The data includes its rows are samples and its columns are clinical features. 
+This itself is the corresponding third data of \code{dat2}. Namely, correlation analysis will be implemented 
+between \code{dat2} and \code{cordat2}}
+
+\item{alternative2}{a character string specifying the alternative hypothesis for Z-score distribution between \code{dat2} 
+and \code{cordat2}. Must be one of "two.sided", "greater" or "less". You can specify just the initial letter.}  
+
+\item{methodCC}{Correlation method. Allowed values are \code{spearman}, \code{pearson} (default),
+\code{kendall}.}
+  
+\item{adjustedP}{logical. Whether we should adjust the P-values gained from correlation analyses. Default is \code{adjustedP = T}}
+}
+
+\description{It automatically computes correlation coefficients of individual genes that share between the first data and its
+corresponding third data, and those that share between the second data and its corresponding third data; visualizes the Z-score 
+distributions of between the first and second data versus their corresponding third data on a page; and examines the significance 
+of the skewness for those distributions using D Agostino test. For further information on requirements as well as how to implement 
+this tool, please visit my Github repository: https://github.com/huynguyen250896/geneCor.
+}
+
+\examples{
+geneCor(dat1 = cna, cordat1 = exp1, alternative1="less", dat2 = met, cordat2 = exp2, alternative2="greater", method = "spearman") 
+#dat1 uses copy number alterations data, and cordat1 uses its corresponding gene expression data.
+#dat2 uses methylation data, and cordat2 uses its corresponding gene expression data.
+}
+
+\references{
+Quang-Huy Nguyen, Duc-Hau Le. (2020). 
+Multi-omics analysis detects novel prognostic subgroups of breast cancer
+Frontiers in Genetics, 11(1265).
+}  
+  
+\author{
+Quang-Huy Nguyen
 }
