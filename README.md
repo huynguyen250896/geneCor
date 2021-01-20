@@ -1,15 +1,27 @@
 # geneCor v0.1.1
 #### I. Introduction
 ---
-The package geneCor is built to serve as a support tool for the paper "*[Multi-omics analysis detects novel prognostic subgroups of breast cancer](https://www.frontiersin.org/articles/10.3389/fgene.2020.574661/full?utm_source=F-NTF&utm_medium=EMLX&utm_campaign=PRD_FEOPS_20170000_ARTICLE#F5)*". </br> It automatically individually computes correlation coefficients of genes shared between CNA data and the corresponding mRNA, and those shared between MET data and the corresponding mRNA; visualizes the overall distribution of Z values between MET or CNA and the corresponding mRNA on a page; and examines the significance of the skewness for those distributions using D'Agostino test. </br> 
+The package geneCor is built to serve as a support tool for the paper "*[Multi-omics analysis detects novel prognostic subgroups of breast cancer](https://www.frontiersin.org/articles/10.3389/fgene.2020.574661/full?utm_source=F-NTF&utm_medium=EMLX&utm_campaign=PRD_FEOPS_20170000_ARTICLE#F5)*". </br> It automatically computes correlation coefficients of individual genes that share between the first data and its corresponding third data, and those that share between the second data and its corresponding third data; visualizes the Z-score distributions of between the first and second data versus their corresponding third data on a page; and examines the significance of the skewness for those distributions using D'Agostino test.  </br> 
 
-#### II. Data Struture
+#### II. Understanding the tool
 ---
-You must preprare the four kinds of the following data: *df1*, *df2*, *df3*, and *df4* (see the 'III.Implementation' section).</br>  
-df1: copy-number alteration matrix comprises its rows are samples, and its columns are genes. </br>  
-df2: gene expression matrix corresponds to the matrix *df1*, comprising its rows are samples, and its columns are genes. NOTE that the size of the matrix *df2* is essentially the same as that of the matrix *df1*. </br>  
-df3: methylation matrix comprises its rows are samples, and its columns are genes. </br>  
-df4: gene expression matrix corresponds to the matrix *df3*, comprising its rows are samples, and its columns are genes. NOTE that the size of the matrix *df4* is essentially the same as that of the matrix *df3*.</br>  
+The following are parameters provided by geneCor:
+- dat1: data.frame or matrix. The first input data includes its rows are samples and its columns are genes.
+
+- cordat1: data.frame or matrix. The data includes its rows are samples and its columns are clinical features. This itself is the corresponding third data of `dat1`. Namely, correlation analysis will be implemented between `dat1` and `cordat1`.
+
+- alternative1: a character string specifying the alternative hypothesis for Z-score distribution between `dat1` and `cordat1`. Must be one of "two.sided", "greater" or "less". You can specify just the initial letter.
+
+- dat2: data.frame or matrix. The second input data includes its rows are samples and its columns are genes.
+
+- cordat2: data.frame or matrix. The data includes its rows are samples and its columns are clinical features. This itself is the corresponding third data of `dat2`. Namely, correlation analysis will be implemented between `dat2` and `cordat2`.
+
+- alternative2: a character string specifying the alternative hypothesis for Z-score distribution between `dat2` and `cordat2`. Must be one of "two.sided", "greater" or "less". You can specify just the initial letter.
+
+- methodCC: character. correlation method. Allowed values are `spearman`, `pearson` (default), `kendall`.
+
+- adjustedP: logical. Whether we should adjust the P-values gained from correlation analyses. Default is `adjustedP = T`.
+
 Please download datasets [Dataset](https://github.com/huynguyen250896/geneCor/tree/master/Dataset) as examples to well grasp geneCor's requirement on data structure. </br>
 
 #### III. Implementation
@@ -24,12 +36,17 @@ library(geneCor)
 ```
 running example:
 ```sh
-geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater") #compute Pearson's correlation coefficients (default method).
-geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater", method = "spearman") #compute Spearman's Rank correlation coefficients.
-geneCor(cna = df1, exp1 = df2, alternative1="less", met = df3, exp2 = df4, alternative2="greater", method = "kendall") #compute Kendall's correlation coefficients.
+geneCor(dat1 = cna, cordat1 = exp1, alternative1="less", dat2 = met, cordat2 = exp2, alternative2="greater") #compute Pearson's correlation coefficients.
+#' #dat1 receives copy number alterations data, and cordat1 receives its corresponding gene expression data.
+#' #dat2 receives methylation data, and cordat2 receives its corresponding gene expression data.
+
+geneCor(dat1 = cna, cordat1 = exp1, alternative1="less", dat2 = met, cordat2 = exp2, alternative2="greater", method = "spearman")  #compute Spearman's Rank correlation coefficients.
+
+geneCor(dat1 = cna, cordat1 = exp1, alternative1="less", dat2 = met, cordat2 = exp2, alternative2="greater", method = "kendall") #compute Kendall's correlation coefficients.
 ```
 #### IV. What's new
 ---
+- 2021-01-20 : the function now can adjust gained P-values from the process of correlation analysis using the Benjamini-Hochberg procedure.
 - 2020-09-30 : The function now can compute one of the three common correlation methods: Pearson, Spearman's rank, or Kendall's tau-b.
 
 #### V. Citation 
