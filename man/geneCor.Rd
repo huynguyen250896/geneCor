@@ -27,7 +27,8 @@ and \code{cordat2}. Must be one of "two.sided", "greater" or "less". You can spe
 \item{methodCC}{Correlation method. Allowed values are \code{spearman}, \code{pearson} (default),
 \code{kendall}.}
   
-\item{adjustedP}{logical. Whether we should adjust the P-values gained from correlation analyses. Default is \code{adjustedP = T}}
+\item{adjustedP}{logical. Whether we should adjust the P-values gained from correlation analyses using the Benjamini-Hochberg procedure.
+Default is \code{adjustedP = T}}
 }
 
 \description{It automatically computes correlation coefficients of individual genes that share between the first data and its
