@@ -24,8 +24,8 @@ Imports:
 Remotes: 
     cran::dplyr,
     cran::tidyr,
-    cran::tidyverse
-    cran::ggplot2
+    cran::tidyverse,
+    cran::ggplot2,
     cran::moments
 Encoding: UTF-8
 LazyData: true
