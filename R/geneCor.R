@@ -44,7 +44,6 @@
 #'
 #' @export
 
-# identify significantly correlated genes
 geneCor = function(dat1 = NULL, cordat1 = NULL, alternative1=c("two.sided","less","greater"), dat2 = NULL, cordat2 = NULL, alternative2=c("two.sided","less","greater"), methodCC = "pearson", adjustedP = TRUE)
 {
   #library
@@ -110,12 +109,12 @@ geneCor = function(dat1 = NULL, cordat1 = NULL, alternative1=c("two.sided","less
   }
   
   #dat1
-  dat1_cor<-data.frame(My_name_is=paste("Huy", 1:ncol(dat1)),Estimate=NA ,P.value=NA)
+  dat1_cor<-data.frame(My_name_is=paste("Huy", 1:ncol(dat1)),CC=NA ,P.value=NA)
   estimates = numeric(ncol(dat1))
   pvalues = numeric(ncol(dat1))
   for (i in c(1:ncol(dat1))) {
     cc=cor.test(dat1[,i],cordat1[,i], method = methodCC)
-    dat1_cor$Estimate[i]=cc$estimate
+    dat1_cor$CC[i]=cc$estimate
     dat1_cor$P.value[i]=cc$p.value
     rownames(dat1_cor) = colnames(dat1)[1:ncol(dat1)]
   }
@@ -131,15 +130,15 @@ geneCor = function(dat1 = NULL, cordat1 = NULL, alternative1=c("two.sided","less
   } else{
     dat1_cor= dat1_cor %>% subset(P.value <=0.05)
   }
-  dat1_cor$fisher_z_trans = log((1+dat1_cor$Estimate)/(1-dat1_cor$Estimate))
+  dat1_cor$fisher_z_trans = log((1+dat1_cor$CC)/(1-dat1_cor$CC))
   
   #dat2
-  dat2_cor <- data.frame(My_name_is=paste("Huy", 1:ncol(dat2)),Estimate=NA ,P.value=NA)
+  dat2_cor <- data.frame(My_name_is=paste("Huy", 1:ncol(dat2)),CC=NA ,P.value=NA)
   estimates = numeric(ncol(dat2))
   pvalues = numeric(ncol(dat2))
   for (i in c(1:ncol(dat2))) {
     cc1=cor.test(dat2[,i],cordat2[,i], method = methodCC)
-    dat2_cor$Estimate[i]=cc1$estimate
+    dat2_cor$CC[i]=cc1$estimate
     dat2_cor$P.value[i]=cc1$p.value
     rownames(dat2_cor) = colnames(dat2)[1:ncol(dat2)]
   }
@@ -154,7 +153,9 @@ geneCor = function(dat1 = NULL, cordat1 = NULL, alternative1=c("two.sided","less
     dat2_cor = dplyr::select(dat2_cor, -rank) #remove the 'rank' column
   } else{
   dat2_cor = dat2_cor %>% subset(P.value <=0.05)}
-  dat2_cor$fisher_z_trans = log((1+dat2_cor$Estimate)/(1-dat2_cor$Estimate))
+  dat2_cor$fisher_z_trans = log((1+dat2_cor$CC)/(1-dat2_cor$CC))
+  cat("- Correlation analyses are performed successfully...", "\n")
+  cat("- Gained correlation coefficients are converted to Z values by Fisher’s Z-transformation following the equation: Z = 0.5*ln[(1+r)/(1−r]).", "\n")
   
   #### p-value of skewness using D'Agostino skewness test
   cat("- Examine whether outliers exist in Z-score values between dat1 and cordat1 or not...", "\n")
@@ -191,8 +192,8 @@ geneCor = function(dat1 = NULL, cordat1 = NULL, alternative1=c("two.sided","less
   
   ####  visualization of distribution
   cat("- Print Z-score distribution of between dat1 versus cordat1, and dat2 versus cordat2...", "\n")
-  dat1_name = as.character(readline('Please name dat1 explicitly. What name you want to set in abbreviation for dat1 (e.g., gene expression ~ GE)? \n'))
-  dat2_name = as.character(readline('Please name dat2 explicitly. What name you want to set in abbreviation for dat2 (e.g., gene expression ~ GE)? \n'))
+  dat1_name = as.character(readline('Please name dat1 explicitly. What name you want to set in abbreviation for dat1 is  (e.g., gene expression ~ GE): \n'))
+  dat2_name = as.character(readline('Please name dat2 explicitly. What name you want to set in abbreviation for dat2 is (e.g., gene expression ~ GE): \n'))
   
   DF1 = as.data.frame(dat1_cor) %>% mutate(Dataset = dat1_name)
   DF2 = as.data.frame(dat2_cor) %>% mutate(Dataset = dat2_name)
