@@ -46,7 +46,7 @@ geneCor(dat1 = cna, cordat1 = exp1, alternative1="less", dat2 = met, cordat2 = e
 
 \references{
 Quang-Huy Nguyen, Duc-Hau Le. (2020). 
-Multi-omics analysis detects novel prognostic subgroups of breast cancer
+Multi-omics analysis detects novel prognostic subgroups of breast cancer.
 Frontiers in Genetics, 11(1265).
 }  
   
