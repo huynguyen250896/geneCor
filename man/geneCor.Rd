@@ -3,7 +3,7 @@
 \name{geneCor}
 \alias{geneCor}
 \title{geneCor: Identification of correlation between two pairs of three datasets, visualization of Z-score distributions of those two pairs on a page, and examination of the significance of the skewness of those distributions.}
-\usage{geneCor(dat1, cordat1, alternative1, dat2, cordat2, alternative2, methodCC, adjustedP))
+\usage{geneCor(dat1, cordat1, alternative1, dat2, cordat2, alternative2, methodCC, adjustedP)
 }
 \arguments{
 \item{dat1}{data.frame or matrix. The first input data includes its rows are samples and its columns are genes.}
