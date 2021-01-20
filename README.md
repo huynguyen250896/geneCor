@@ -20,7 +20,7 @@ The following are parameters provided by geneCor:
 
 - methodCC: character. correlation method. Allowed values are `spearman`, `pearson` (default), `kendall`.
 
-- adjustedP: logical. Whether we should adjust the P-values gained from correlation analyses. Default is `adjustedP = T`.
+- adjustedP: logical. Whether we should adjust the P-values gained from correlation analyses using the Benjamini-Hochberg procedure. Default is `adjustedP = T`.
 
 Please download datasets [Dataset](https://github.com/huynguyen250896/geneCor/tree/master/Dataset) as examples to well grasp geneCor's requirement on data structure. </br>
 
