@@ -24,10 +24,16 @@ The following are parameters provided by geneCor:
 
 Please download datasets [Dataset](https://github.com/huynguyen250896/geneCor/tree/master/Dataset) as examples to well grasp geneCor's requirement on data structure. </br>
 
-#### III. Pipeline
+#### III. Pipeline and Gain results
 ---
 ![Figure](https://imgur.com/PvC9IOQ.png)
-</br> **Figure:** Pipeline of the package geneCor.
+</br> **Figure 1:** Pipeline of the package geneCor.
+
+![Figure](https://imgur.com/q7QFgCS.png)
+</br> **Figure 2:** Statistical significance of the skewness is printed in the R environment.
+
+![Figure](https://imgur.com/qKVuaaK.png)
+</br> **Figure 3:** the Z-score distributions of between the first and second data versus their corresponding third data on a page.
 
 #### IV. Implementation
 ---
