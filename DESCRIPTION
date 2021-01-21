@@ -14,7 +14,7 @@ Description: It automatically computes correlation coefficients of individual
     https://github.com/huynguyen250896/geneCor.
 License: MIT license
 Depends:
-    R (>= 3.1.0)
+    R (>= 3.5.0)
 Imports:
     dplyr,
     tidyr,
