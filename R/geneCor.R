@@ -155,7 +155,7 @@ geneCor = function(dat1 = NULL, cordat1 = NULL, alternative1=c("two.sided","less
   dat2_cor = dat2_cor %>% subset(P.value <=0.05)}
   dat2_cor$fisher_z_trans = log((1+dat2_cor$CC)/(1-dat2_cor$CC))
   cat("- Correlation analyses are performed successfully...", "\n")
-  cat("- Gained correlation coefficients are converted to Z values by Fisher’s Z-transformation following the equation: Z = 0.5*ln[(1+r)/(1−r]).", "\n")
+  cat("- Gained correlation coefficients are converted to Z values by Fisher’s Z-transformation following the equation: Z = 0.5*ln[(1+r)/(1−r)].", "\n")
   
   #### p-value of skewness using D'Agostino skewness test
   cat("- Examine whether outliers exist in Z-score values between dat1 and cordat1 or not...", "\n")
