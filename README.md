@@ -57,7 +57,7 @@ geneCor(dat1 = cna, cordat1 = exp1, alternative1="less", dat2 = met, cordat2 = e
 ```
 #### V. What's new
 ---
-- 2021-01-20 : the function now can adjust gained P-values from the process of correlation analysis using the Benjamini-Hochberg procedure.
+- 2021-01-20 : The function now can adjust gained P-values from the process of correlation analysis using the Benjamini-Hochberg procedure.
 - 2020-09-30 : The function now can compute one of the three common correlation methods: Pearson, Spearman's rank, or Kendall's tau-b.
 
 #### VI. Citation 
