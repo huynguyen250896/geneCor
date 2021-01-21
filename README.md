@@ -27,7 +27,7 @@ Please download datasets [Dataset](https://github.com/huynguyen250896/geneCor/tr
 #### III. Pipeline
 ---
 ![Figure](https://imgur.com/PvC9IOQ.png)
-**Figure:** Pipeline of the package geneCor.
+</br> **Figure:** Pipeline of the package geneCor.
 
 #### IV. Implementation
 ---
