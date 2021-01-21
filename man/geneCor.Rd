@@ -31,10 +31,10 @@ and \code{cordat2}. Must be one of "two.sided", "greater" or "less". You can spe
 Default is \code{adjustedP = T}}
 }
 
-\description{It automatically computes correlation coefficients of individual genes that share between the first data and its
-corresponding third data, and those that share between the second data and its corresponding third data; visualizes the Z-score 
-distributions of between the first and second data versus their corresponding third data on a page; and examines the significance 
-of the skewness for those distributions using D Agostino test. For further information on requirements as well as how to implement 
+\description{It automatically computes correlation coefficients of individual genes that share between the first data \code{dat1} and its
+corresponding third data \code{cordat1}, and those that share between the second data \code{dat2} and its corresponding third data \code{cordat2}
+; visualizes the Z-score distributions of between the first and second data versus their corresponding third data on a page; and examines the 
+significance of the skewness for those distributions using D Agostino test. For further information on requirements as well as how to implement 
 this tool, please visit my Github repository: https://github.com/huynguyen250896/geneCor.
 }
 
