@@ -24,7 +24,7 @@ The following are parameters provided by geneCor:
 
 Please download datasets [Dataset](https://github.com/huynguyen250896/geneCor/tree/master/Dataset) as examples to well grasp geneCor's requirement on data structure. </br>
 
-#### III. Pipeline and Gain results
+#### III. Pipeline and gained results
 ---
 ![Figure](https://imgur.com/PvC9IOQ.png)
 </br> **Figure 1:** Pipeline of the package geneCor.
