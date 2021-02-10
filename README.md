@@ -30,10 +30,10 @@ Please download datasets [Dataset](https://github.com/huynguyen250896/geneCor/tr
 </br> **Figure 1:** Pipeline of the package geneCor.
 
 ![Figure](https://imgur.com/q7QFgCS.png)
-</br> **Figure 2:** Statistical significance of the skewness is printed in the R environment.
+</br> **Figure 2:** Statistical significance of the skewness is printed in the R environment. `dat1_cor` is the result of association between `dat1` and `cordat1`, and their relationship is positively skewed. In contrast, `dat2_cor` is the result of association between `dat2` and `cordat2`, and their relationship is negatively skewed.
 
 ![Figure](https://imgur.com/qKVuaaK.png)
-</br> **Figure 3:** the Z-score distributions of between copy number alterations (CNA, `dat1`) and methylation (MET, `dat2`) versus gene expression (EXP, their corresponding third data `cordat1` and `cordat2`) on a page.
+</br> **Figure 3:** the Z-score distributions of between copy number alterations (CNA, `dat1`) versus its corresponding gene expression (its corresponding third data `cordat1`), and methylation (MET, `dat2`) versus its corresponding gene expression (its corresponding third data `cordat2`) on a page.
 
 #### IV. Implementation
 ---
