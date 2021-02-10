@@ -33,7 +33,7 @@ Please download datasets [Dataset](https://github.com/huynguyen250896/geneCor/tr
 </br> **Figure 2:** Statistical significance of the skewness is printed in the R environment.
 
 ![Figure](https://imgur.com/qKVuaaK.png)
-</br> **Figure 3:** the Z-score distributions of between the first and second data versus their corresponding third data on a page.
+</br> **Figure 3:** the Z-score distributions of between copy number alterations (CNA, `dat1`) and methylation (MET, `dat2`) versus gene expression (EXP, their corresponding third data `cordat1` and `cordat2`) on a page.
 
 #### IV. Implementation
 ---
