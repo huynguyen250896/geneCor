@@ -119,7 +119,7 @@ geneCor = function(dat1 = NULL, cordat1 = NULL, alternative1=c("two.sided","less
     rownames(dat1_cor) = colnames(dat1)[1:ncol(dat1)]
   }
   dat1_cor = dat1_cor[,-1]
-  if(adjustedP == TRUE){
+  if(adjustedP == TRUE | adjustedP == T){
     order.pvalue = order(dat1_cor$P.value)
     dat1_cor = dat1_cor[order.pvalue,] #order rows following p-value
     dat1_cor$rank = rank(dat1_cor$P.value) #re-order
@@ -143,7 +143,7 @@ geneCor = function(dat1 = NULL, cordat1 = NULL, alternative1=c("two.sided","less
     rownames(dat2_cor) = colnames(dat2)[1:ncol(dat2)]
   }
   dat2_cor = dat2_cor[,-1]
-  if(adjustedP == T | TRUE){
+  if(adjustedP == T | adjustedP == TRUE){
     order.pvalue = order(dat2_cor$P.value)
     dat2_cor = dat2_cor[order.pvalue,] #order rows following p-value
     dat2_cor$rank = rank(dat2_cor$P.value) #re-order
