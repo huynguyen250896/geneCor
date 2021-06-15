@@ -161,12 +161,12 @@ geneCor = function(dat1 = NULL, cordat1 = NULL, alternative1=c("two.sided","less
   cat("- Examine whether outliers exist in Z-score values between dat1 and cordat1 or not...", "\n")
   cat(">> The number of negative Z-scores is", table(sign(dat1_cor$fisher_z_trans))[[1]], ", whereas the number of positive Z-scores is", table(sign(dat1_cor$fisher_z_trans))[[2]],"\n")
   if(table(sign(dat1_cor$fisher_z_trans))[[1]] > table(sign(dat1_cor$fisher_z_trans))[[2]]){
-    answer = as.character(readline('Perhaps positive Z-scores are potential outliers. Do you want remove them? (Y or N?) \n'))
+    answer = as.character(readline('Perhaps positive Z-scores are potential outliers. Do you want to remove them? (Y or N?) \n'))
     if(answer == "Y"){
       dat1_cor = dat1_cor %>% dplyr::filter(.$fisher_z_trans < 0)
     }
   } else{
-    answer = as.character(readline('Perhaps negative Z-scores are potential outliers. Do you want remove them? (Y or N?) \n'))
+    answer = as.character(readline('Perhaps negative Z-scores are potential outliers. Do you want to remove them? (Y or N?) \n'))
     if(answer == "Y"){
       dat1_cor = dat1_cor %>%  dplyr::filter(.$fisher_z_trans > 0)
     }
@@ -175,12 +175,12 @@ geneCor = function(dat1 = NULL, cordat1 = NULL, alternative1=c("two.sided","less
   cat("- Examine whether outliers exist in Z-score values between dat2 and cordat2 or not...", "\n")
   cat(">> The number of negative Z-score is", table(sign(dat2_cor$fisher_z_trans))[[1]], ", whereas the number of positive Z-score is", table(sign(dat2_cor$fisher_z_trans))[[2]],"\n")
   if(table(sign(dat2_cor$fisher_z_trans))[[1]] > table(sign(dat2_cor$fisher_z_trans))[[2]]){
-    answer = as.character(readline('Perhaps positive Z-scores are potential outliers. Do you want remove them? (Y or N?) \n'))
+    answer = as.character(readline('Perhaps positive Z-scores are potential outliers. Do you want to remove them? (Y or N?) \n'))
     if(answer == "Y"){
       dat2_cor = dat2_cor %>% dplyr::filter(.$fisher_z_trans < 0)
     }
   } else{
-    answer = as.character(readline('Perhaps negative Z-scores are potential outliers. Do you want remove them? (Y or N?) \n'))
+    answer = as.character(readline('Perhaps negative Z-scores are potential outliers. Do you want to remove them? (Y or N?) \n'))
     if(answer == "Y"){
       dat2_cor = dat2_cor %>%  dplyr::filter(.$fisher_z_trans > 0)
     }
