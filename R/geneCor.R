@@ -192,8 +192,8 @@ geneCor = function(dat1 = NULL, cordat1 = NULL, alternative1=c("two.sided","less
   
   ####  visualization of distribution
   cat("- Print Z-score distribution of between dat1 versus cordat1, and dat2 versus cordat2...", "\n")
-  dat1_name = as.character(readline('Please name dat1 explicitly. What name you want to set in abbreviation for dat1 is  (e.g., gene expression ~ GE): \n'))
-  dat2_name = as.character(readline('Please name dat2 explicitly. What name you want to set in abbreviation for dat2 is (e.g., gene expression ~ GE): \n'))
+  dat1_name = as.character(readline('Please name dat1 explicitly. What name do you want to set in abbreviation for dat1?  (e.g., gene expression ~ GE): \n'))
+  dat2_name = as.character(readline('Please name dat2 explicitly. What name do you want to set in abbreviation for dat2? (e.g., gene expression ~ GE): \n'))
   
   DF1 = as.data.frame(dat1_cor) %>% mutate(Dataset = dat1_name)
   DF2 = as.data.frame(dat2_cor) %>% mutate(Dataset = dat2_name)
